@@ -10,7 +10,8 @@ package com.mycompany.twix;
  *
  * @author Dasha-RV515
  */
-public class TwixV {
-    public String lt="Left_Sticks";
-     public String rt="Right_Sticks";
+public  final class TwixV {
+   public static final String  LT="Left_Sticks";
+    public static final String RT="Right_Sticks";
+    private TwixV(){}
 }

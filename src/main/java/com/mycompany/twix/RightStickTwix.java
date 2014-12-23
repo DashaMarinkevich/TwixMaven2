@@ -20,38 +20,9 @@ public class RightStickTwix extends Twix {//переопределяются м�
 
     }
 
-    @Override
-    public String toString() {
-        String str = new String();
-        str = super.toString() + ": " + "Vertically";
-        return str;
-    }
+   
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (this == obj) {
-            return true;
-        }
-        if (obj instanceof RightStickTwix) {
-            RightStickTwix temp = (RightStickTwix) obj;
-            return this.cake == temp.cake
-                    && this.chocol.equals(temp.chocol)
-                    && this.name.equals(temp.name)
-                    && this.caramel.equals(temp.caramel);
-        } else {
-            return false;
-        }
-    }
 
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 47 * hash + this.time;
-        return hash;
-    }
 
     public void poured() {//переопределяем метод покрытия карамели
         System.out.println("Pour on cookie caramel vertically");

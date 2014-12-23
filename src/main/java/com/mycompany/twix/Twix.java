@@ -58,7 +58,50 @@ public abstract class Twix {//является супер классом для 
     @Override
     public String toString() {
         String str = new String();
-        str = "Product: " + name + "\n";
+        str = "Product: " + name + "\n"+"Chocolate: "+chocol+"\n"+"Caramel: "+caramel+"\n"+"Cake: "+cake+"\n";
         return str;
+    }
+  
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 37 * hash + (this.name != null ? this.name.hashCode() : 0);
+        hash = 37 * hash + (this.chocol != null ? this.chocol.hashCode() : 0);
+        hash = 37 * hash + (this.caramel != null ? this.caramel.hashCode() : 0);
+        hash = 37 * hash + (this.cake != null ? this.cake.hashCode() : 0);
+        hash = 37 * hash + this.time;
+        hash = 37 * hash + (this.toppings != null ? this.toppings.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Twix other = (Twix) obj;
+        if ((this.name == null) ? (other.name != null) : !this.name.equals(other.name)) {
+            return false;
+        }
+        if ((this.chocol == null) ? (other.chocol != null) : !this.chocol.equals(other.chocol)) {
+            return false;
+        }
+        if ((this.caramel == null) ? (other.caramel != null) : !this.caramel.equals(other.caramel)) {
+            return false;
+        }
+        if ((this.cake == null) ? (other.cake != null) : !this.cake.equals(other.cake)) {
+            return false;
+        }
+        if (this.time != other.time) {
+            return false;
+        }
+        if (this.toppings != other.toppings && (this.toppings == null || !this.toppings.equals(other.toppings))) {
+            return false;
+        }
+        return true;
     }
 }

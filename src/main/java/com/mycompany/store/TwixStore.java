@@ -19,10 +19,6 @@ public abstract class TwixStore {
         twix = createTwix(type);//обращаемся к фабрике с запросом на создание объкта(все подтипы должны реализовыв. этот метод)
         String s = twix.toString();
         System.out.println("Caramel poured on twix.." + s);
-        boolean a = twix.equals(twix);
-        if (a) {
-            System.out.println("TWIX CREATE ON THE STORE");
-        }
         twix.prepare();
         twix.bake();//выпекаем 
         twix.poured();//покрываем карамелью

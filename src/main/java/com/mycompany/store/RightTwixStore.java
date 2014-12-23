@@ -30,8 +30,8 @@ public class RightTwixStore extends TwixStore {//реализация . мето
 
     @Override
     protected Twix createTwix(String type) {
-        TwixV ob=new TwixV();
-        if (type.equals(ob.rt)) {
+    
+        if (type.equals( TwixV.RT)) {
             return new RightStickTwix();
 
         } else {

@@ -26,8 +26,8 @@ public class LeftTwixStore extends TwixStore {
 
     @Override
     protected Twix createTwix(String type) {
-      TwixV ob=new TwixV();
-        if (type.equals(ob.lt)) {
+      
+        if (type.equals( TwixV.LT)) {
             return new LeftStickTwix();
         } else {
             return null;
